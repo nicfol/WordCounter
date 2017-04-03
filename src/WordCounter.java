@@ -13,7 +13,7 @@ public class WordCounter
 {
     public static void main(String[ ] args)
     {
-        TreeMap<String, Integer> frequencyData = new TreeMap<String, Integer>( );
+        TreeMap<String, Integer> frequencyData = new TreeMap<String, Integer>(String.CASE_INSENSITIVE_ORDER);
 
         readWordFile(frequencyData);
         printAllCounts(frequencyData);
@@ -85,7 +85,7 @@ public class WordCounter
                 "ved hjælp af", "normalt", "værdi", "diverse", "meget", "via", "nemlig", "vs", "vil ", "ønsker", "var", "var ikke", "måde", "vi", "gift", "godt",
                 "var", "weve", "velkommen", "godt", "gik", "var", "werent", "hvad", "hvad", "hvad", "når", "hvorfra", "hver gang", "hvor", "wheres" , "Hvorefter",
                 "henviser", "hvorved", "hvor", "hvorefter", "hvor", "hvorvidt", "som", "mens", "hvorhen", "der", "whos", " hvem", "hele", "hvem", "hvis", "hvorfor",
-                "vil", "villige", "ønske", "med",};
+                "vil", "villige", "ønske", "med", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
 
 
         int cnt = 1;
@@ -112,7 +112,7 @@ public class WordCounter
 
         try
         {
-            wordFile = new Scanner(new FileReader("C:\\Users\\Nicolai\\Documents\\Github\\Web2JSON\\output\\total.txt"));
+            wordFile = new Scanner(new FileReader("C:\\Users\\Nicolai\\Documents\\Github\\WordCounter\\Clean descriptions.txt"));
         }
         catch (FileNotFoundException e)
         {
