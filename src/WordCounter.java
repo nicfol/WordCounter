@@ -11,6 +11,9 @@ import java.io.*;    // Provides FileReader, FileNotFoundException
 
 public class WordCounter
 {
+
+    private final static String workingDirectory = System.getProperty("user.dir");
+
     public static void main(String[ ] args)
     {
         TreeMap<String, Integer> frequencyData = new TreeMap<String, Integer>(String.CASE_INSENSITIVE_ORDER);
@@ -112,7 +115,7 @@ public class WordCounter
 
         try
         {
-            wordFile = new Scanner(new FileReader("C:\\Users\\Nicolai\\Documents\\Github\\WordCounter\\Clean descriptions.txt"));
+            wordFile = new Scanner(new FileReader(workingDirectory + "/Clean descriptions.txt"));
         }
         catch (FileNotFoundException e)
         {
